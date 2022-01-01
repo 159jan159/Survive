@@ -23,14 +23,14 @@ public class PlayerController : MonoBehaviour
         //running if shift
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = 3f;
+            speed = 700f;
         }else
         {
-            speed = 2f;
+            speed = 500f;
         }
 
         //pohyb
-        myRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"))*speed;
+        myRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical")).normalized*speed*Time.deltaTime;
         
         //animace
         myAnim.SetFloat("MoveX", myRB.velocity.x);
