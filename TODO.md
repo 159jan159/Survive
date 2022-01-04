@@ -1,6 +1,6 @@
 TODO kresbování
-
-   - [ ] Barák   
+   
+      Barák   
         Interier
             podlaha
             skřínky
