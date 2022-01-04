@@ -21,6 +21,10 @@ TODO kresbování
     
     Zombie(stejně jako charakter)
     když 2 bude to pecka (1 bude stačit na pololetí)
+    
+    Itemy
+        prostě neco co se dá zobrazit v inventáři 
+        nevím asi pustím 7DTD a kouknu co tam je za itemáče
 
     not important 
     Main Char možná předělat trochu do fr fr apokliptického oblečení
