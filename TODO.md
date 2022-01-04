@@ -11,6 +11,9 @@ TODO kresbování
             atd...
 
     Exteriér
+        Strom
+        kámeny
+            větčí a menčejší
         doopravit ty cesty 
         lotteble stuff
             popelnice 
@@ -23,6 +26,8 @@ TODO kresbování
     když 2 bude to pecka (1 bude stačit na pololetí)
     
     Itemy
+        dřevo
+        kámen
         prostě neco co se dá zobrazit v inventáři 
         nevím asi pustím 7DTD a kouknu co tam je za itemáče
 
