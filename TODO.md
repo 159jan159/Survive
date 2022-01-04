@@ -1,6 +1,13 @@
 TODO kresbování
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+     [ ] Barák   
+=======
+>>>>>>> Stashed changes
 
     Barák   
+>>>>>>> 7d16b637511135cf03296fab16a3320528f57b8c
         Interier
             podlaha
             skřínky
