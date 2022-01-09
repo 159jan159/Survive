@@ -23,10 +23,10 @@ public class PlayerController : MonoBehaviour
         //running if shift
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = 700f;
+            speed = 1500f;
         }else
         {
-            speed = 500f;
+            speed = 1000f;
         }
 
         //pohyb
