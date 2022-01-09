@@ -36,13 +36,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ItemRelated\Inventory.cs" />
      <Compile Include="Assets\Scripts\CameraRelated\CameraControler.cs" />
-     <Compile Include="Assets\Scripts\PlayerRelated\PlayerController.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Item.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\ItemStack.cs" />
-     <Compile Include="Assets\Scripts\ItemRelated\Inventory.cs" />
-     <Compile Include="Assets\Scripts\ItemRelated\Container.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\InventoryManager.cs" />
+     <Compile Include="Assets\Scripts\PlayerRelated\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\ItemRelated\Container.cs" />
+     <Compile Include="Assets\Scripts\EnemyRelated\ZombieController.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
