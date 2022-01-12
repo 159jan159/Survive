@@ -2,7 +2,11 @@ Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.18f1 (a7d1c678663c) revision 10998214'; Using compiler version '192528614'; Build Type 'Release'
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 OS: 'Windows 10 Home; OS build 22000.434; Version 2009; 64bit' Language: 'cs' Physical Memory: 7564 MB
+=======
+OS: 'Windows 10 Home; OS build 19044.1415; Version 2009; 64bit' Language: 'cs' Physical Memory: 32694 MB
+>>>>>>> Stashed changes
 =======
 OS: 'Windows 10 Home; OS build 19044.1415; Version 2009; 64bit' Language: 'cs' Physical Memory: 32694 MB
 >>>>>>> Stashed changes
@@ -19,6 +23,7 @@ C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 D:/2D7DTD/7DTD
@@ -44,6 +49,8 @@ Direct3D:
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 C:/Users/janko/Desktop/2D7DTD/7DTD
 -logFile
 Logs/AssetImportWorker0.log
@@ -65,6 +72,9 @@ Direct3D:
     VRAM:     4075 MB
     Driver:   30.0.13037.1003
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -72,6 +82,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56992
@@ -90,6 +101,8 @@ Domain Reload Profiling:
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56408
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
@@ -104,6 +117,9 @@ Domain Reload Profiling:
 	ReloadAssembly (699ms)
 		BeginReloadAssembly (35ms)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -111,6 +127,7 @@ Domain Reload Profiling:
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 			CreateAndSetChildDomain (1ms)
@@ -131,6 +148,8 @@ Domain Reload Profiling:
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 			CreateAndSetChildDomain (0ms)
 		EndReloadAssembly (260ms)
 			LoadAssemblies (34ms)
@@ -147,6 +166,9 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (51ms)
 				ProcessInitializeOnLoadMethodAttributes (17ms)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -156,6 +178,7 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Registered in 0.009390 seconds.
@@ -206,6 +229,8 @@ Total: 5.298600 ms (FindLiveObjects: 0.376700 ms CreateObjectMapping: 0.140200 m
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 Registered in 0.002245 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -252,6 +277,9 @@ System memory in use after: 97.4 MB.
 Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 2689.
 Total: 2.179000 ms (FindLiveObjects: 0.120100 ms CreateObjectMapping: 0.042400 ms MarkObjects: 1.974400 ms  DeleteObjects: 0.041400 ms)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -265,7 +293,10 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -275,6 +306,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
   path: Assets/Tilemaps/House.prefab
@@ -566,12 +598,17 @@ AssetImportParameters requested are different than current active one (requested
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   path: Assets/SuperTiled2Unity/SuperTiled2Unity.asmdef
   artifactKey: Guid(06e56dbbb8dec4d43a0b85b0fe0dd0ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/SuperTiled2Unity/SuperTiled2Unity.asmdef using Guid(06e56dbbb8dec4d43a0b85b0fe0dd0ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '077dc2e7641f43105fe60c885c20f5b2') in 0.017770 seconds 
   Import took 0.019992 seconds .
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
