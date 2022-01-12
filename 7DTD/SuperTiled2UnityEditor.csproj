@@ -48,8 +48,8 @@
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Importers\TmxAssetImporter.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Importers\TmxAssetImporter.TileLayer.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\ThirdParty\LibTessDotNet\MeshUtils.cs" />
-     <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Settings\ST2USettingsEditor.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\ThirdParty\LibTessDotNet\Tess.cs" />
+     <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Settings\ST2USettingsEditor.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Windows\SuperPackageExport.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\AtlasSize.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Extensions\CompositeCollider2DExtensions.cs" />
@@ -57,8 +57,8 @@
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Collision\CollisionClipper.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Collision\Geometry\CompositionPolygon.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Importers\TmxAssetImporter.GroupLayer.cs" />
-     <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Math\ColliderFactoryIsometric.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Postprocessors\TiledAssetDependencies.cs" />
+     <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Math\ColliderFactoryIsometric.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\AssetDatabaseEx.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Loaders\SuperTileLayerLoader.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Properties\CustomObjectType.cs" />
@@ -88,13 +88,13 @@
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Config\SuperTiled2Unity_Config.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Postprocessors\AssetDependencies.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Exceptions\CustomImporterException.cs" />
-     <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\ThirdParty\LibTessDotNet\Mesh.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Importers\SuperImporterEditor.cs" />
+     <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\ThirdParty\LibTessDotNet\Mesh.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Importers\TmxAssetImporterEditor.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Math\ColliderFactory.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Postprocessors\SuperTexturePostprocessor.cs" />
-     <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\ThirdParty\MultiValueDictionary.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Postprocessors\SuperAssetDependencyPostprocessor.cs" />
+     <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\ThirdParty\MultiValueDictionary.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Windows\RecursiveAssetDependencyTracker.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\Settings\CustomPropertiesWindow.cs" />
      <Compile Include="Assets\SuperTiled2Unity\Scripts\Editor\LayerIgnoreMode.cs" />
