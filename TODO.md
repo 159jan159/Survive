@@ -33,3 +33,6 @@ TODO kresbování
 
     not important 
     Main Char možná předělat trochu do fr fr apokliptického oblečení
+
+
+    skála jakože prostě na na do který vrazíš a bude tam vlezka do díry a tak bude kopatko mre
