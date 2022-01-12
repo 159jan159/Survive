@@ -5,7 +5,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperTiled2Unity", "SuperTiled2Unity.csproj", "{047ae9eb-d0b9-0233-f69f-c39b8e747473}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProject", "AstarPathfindingProject.csproj", "{7a98d32b-6080-216a-acf8-3530cdc72741}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperTiled2UnityEditor", "SuperTiled2UnityEditor.csproj", "{04e3a673-a19a-e44c-ea9d-eb6319ea35a8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProjectEditor", "AstarPathfindingProjectEditor.csproj", "{0b01f0e0-3c3b-c306-036a-744ed09af05a}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageToolsEditor", "PackageToolsEditor.csproj", "{0dc6f23a-3a0c-7646-0cab-eccc691984f1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,8 +22,14 @@ Global
 		{218d121c-9405-941e-2515-4648dfa718e0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{047ae9eb-d0b9-0233-f69f-c39b8e747473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{047ae9eb-d0b9-0233-f69f-c39b8e747473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7a98d32b-6080-216a-acf8-3530cdc72741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7a98d32b-6080-216a-acf8-3530cdc72741}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04e3a673-a19a-e44c-ea9d-eb6319ea35a8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{04e3a673-a19a-e44c-ea9d-eb6319ea35a8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0b01f0e0-3c3b-c306-036a-744ed09af05a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0b01f0e0-3c3b-c306-036a-744ed09af05a}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0dc6f23a-3a0c-7646-0cab-eccc691984f1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0dc6f23a-3a0c-7646-0cab-eccc691984f1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

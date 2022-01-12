@@ -44,6 +44,8 @@
      <Compile Include="Assets\Scripts\ItemRelated\InventoryManager.cs" />
      <Compile Include="Assets\Scripts\PlayerRelated\PlayerController.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Container.cs" />
+     <Compile Include="Assets\Scripts\PlayerRelated\PlayerHealthManager.cs" />
+     <Compile Include="Assets\Scripts\EnemyRelated\HurtPlayer.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -265,6 +267,9 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+        <HintPath>C:/Users/janko/Desktop/2D7DTD/7DTD/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -653,9 +658,6 @@
     <Reference Include="Unity.2D.Path.Editor">
         <HintPath>C:/Users/janko/Desktop/2D7DTD/7DTD/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-        <HintPath>C:/Users/janko/Desktop/2D7DTD/7DTD/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>C:/Users/janko/Desktop/2D7DTD/7DTD/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -664,6 +666,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>C:/Users/janko/Desktop/2D7DTD/7DTD/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+        <HintPath>C:/Users/janko/Desktop/2D7DTD/7DTD/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>C:/Users/janko/Desktop/2D7DTD/7DTD/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -703,13 +708,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="SuperTiled2UnityEditor.csproj">
+      <Project>{04e3a673-a19a-e44c-ea9d-eb6319ea35a8}</Project>
+      <Name>SuperTiled2UnityEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="SuperTiled2Unity.csproj">
       <Project>{047ae9eb-d0b9-0233-f69f-c39b8e747473}</Project>
       <Name>SuperTiled2Unity</Name>
     </ProjectReference>
-    <ProjectReference Include="SuperTiled2UnityEditor.csproj">
-      <Project>{04e3a673-a19a-e44c-ea9d-eb6319ea35a8}</Project>
-      <Name>SuperTiled2UnityEditor</Name>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{0b01f0e0-3c3b-c306-036a-744ed09af05a}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{7a98d32b-6080-216a-acf8-3530cdc72741}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{0dc6f23a-3a0c-7646-0cab-eccc691984f1}</Project>
+      <Name>PackageToolsEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
