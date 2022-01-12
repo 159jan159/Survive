@@ -35,6 +35,9 @@ MonoBehaviour:
   controlID: 917
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -164,6 +167,9 @@ MonoBehaviour:
   controlID: 918
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -196,7 +202,11 @@ MonoBehaviour:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   controlID: 98
+=======
+  controlID: 919
+>>>>>>> Stashed changes
 =======
   controlID: 919
 >>>>>>> Stashed changes
@@ -265,7 +275,11 @@ MonoBehaviour:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       m_ExpandedIDs: e0faffff
+=======
+      m_ExpandedIDs: 42fbffff26420000
+>>>>>>> Stashed changes
 =======
       m_ExpandedIDs: 42fbffff26420000
 >>>>>>> Stashed changes
@@ -365,9 +379,15 @@ MonoBehaviour:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Target: {x: -2.3400865, y: -0.3987179, z: -2.0746129}
     speed: 2
     m_Value: {x: -2.3400865, y: -0.3987179, z: -2.0746129}
+=======
+    m_Target: {x: -9.910605, y: -0.6179071, z: -0.48299712}
+    speed: 2
+    m_Value: {x: -9.910605, y: -0.6179071, z: -0.48299712}
+>>>>>>> Stashed changes
 =======
     m_Target: {x: -9.910605, y: -0.6179071, z: -0.48299712}
     speed: 2
@@ -436,9 +456,15 @@ MonoBehaviour:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Target: 5.3503003
     speed: 2
     m_Value: 5.3503003
+=======
+    m_Target: 4.13564
+    speed: 2
+    m_Value: 4.13564
+>>>>>>> Stashed changes
 =======
     m_Target: 4.13564
     speed: 2
@@ -552,6 +578,9 @@ MonoBehaviour:
   m_ActualView: {fileID: 10}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -562,11 +591,14 @@ MonoBehaviour:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 12}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &11
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -636,6 +668,9 @@ MonoBehaviour:
     m_ExpandedIDs: 000000003c4300003e430000404300004243000000ca9a3b
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -671,7 +706,11 @@ MonoBehaviour:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_ExpandedIDs: 00000000ac430000ae430000b0430000b2430000
+=======
+    m_ExpandedIDs: 000000003c4300003e430000404300004243000000ca9a3b
+>>>>>>> Stashed changes
 =======
     m_ExpandedIDs: 000000003c4300003e430000404300004243000000ca9a3b
 >>>>>>> Stashed changes
@@ -708,10 +747,13 @@ MonoBehaviour:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_SelectedInstanceIDs: b8420000
     m_LastClickedInstanceID: 17080
     m_HadKeyboardFocusLastEvent: 1
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -833,7 +875,11 @@ MonoBehaviour:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_LastInspectedObjectInstanceID: 17080
+=======
+  m_LastInspectedObjectInstanceID: 16960
+>>>>>>> Stashed changes
 =======
   m_LastInspectedObjectInstanceID: 16960
 >>>>>>> Stashed changes
