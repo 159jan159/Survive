@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D myRB;
     private Animator myAnim;
+    private PlayerStaminaManager playerStamina;
 
     [SerializeField]
     private float speed;
@@ -15,23 +16,25 @@ public class PlayerController : MonoBehaviour
     {
         myRB = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
+        playerStamina = GetComponent<PlayerStaminaManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //running if shift
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
+        if (Input.GetKey(KeyCode.LeftShift) && playerStamina.currentStamina > 0){
+            playerStamina.canRegen = false;
             speed = 1500f;
-        }else
-        {
+            Debug.Log(1*Time.deltaTime);
+            playerStamina.loseStamina(3*Time.deltaTime);
+        }else{
+            playerStamina.canRegen = true;
             speed = 1000f;
         }
 
         //pohyb
-        myRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical")).normalized*speed*Time.deltaTime;
-        
+        myRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical")).normalized*speed*Time.deltaTime;        
         //animace
         myAnim.SetFloat("MoveX", myRB.velocity.x);
         myAnim.SetFloat("MoveY", myRB.velocity.y);
