@@ -13,8 +13,18 @@ public class InventoryManager : MonoBehaviour
     }
     #endregion
 
+    public GameObject slotPrefab;
     public List<ContainerGetter> containers = new List<ContainerGetter>();
     private Container currentOpenContainer;
+    private ItemStack curDraggedStack = ItemStack.Empty;
+    private GameObject spawnedDragStack;
+    private DragedItemStack dragStack;
+
+
+    private void Start()
+    {
+        dragStack = GetComponent<DragedItemStack>();
+    }
 
     public GameObject getContainerPrefab(string name){
         foreach (ContainerGetter container in containers)
@@ -36,6 +46,14 @@ public class InventoryManager : MonoBehaviour
         if (currentOpenContainer != null){
             currentOpenContainer.closeConteiner();
         }
+    }
+
+    public ItemStack getDragedItemStack(){
+        return curDraggedStack;
+    }
+
+    public void setDragedItemStack(ItemStack stackIn){
+        dragStack.setDragedStack(curDraggedStack = stackIn);
     }
 }
 
