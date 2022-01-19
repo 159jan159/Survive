@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Item[] itemsToAdd;
+    private Inventory myInventory = new Inventory(28);
     private Rigidbody2D myRB;
     private Animator myAnim;
     private PlayerStaminaManager playerStamina;
+    private bool isInventoryOpen;
 
     [SerializeField]
     private float speed;
@@ -17,20 +20,45 @@ public class PlayerController : MonoBehaviour
         myRB = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
         playerStamina = GetComponent<PlayerStaminaManager>();
+
+        foreach (Item item in itemsToAdd)
+        {
+            myInventory.addItem(new ItemStack(item,1));
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (!isInventoryOpen)
+            {
+                InventoryManager.INSTANCE.openContainer(new ContainerPlayerInventory(null, myInventory));
+                isInventoryOpen = true;
+            }else
+            {
+                InventoryManager.INSTANCE.closeContainer();
+                isInventoryOpen = false;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isInventoryOpen)
+            {
+                InventoryManager.INSTANCE.closeContainer();
+                isInventoryOpen = false;
+            }
+        }
         //running if shift
         if (Input.GetKey(KeyCode.LeftShift) && playerStamina.currentStamina > 0){
             playerStamina.canRegen = false;
-            speed = 1500f;
+            speed = 1000f;
             Debug.Log(1*Time.deltaTime);
             playerStamina.loseStamina(3*Time.deltaTime);
         }else{
             playerStamina.canRegen = true;
-            speed = 1000f;
+            speed = 800f;
         }
 
         //pohyb
