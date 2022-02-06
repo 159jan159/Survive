@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Item[] itemsToAdd;
-    private Inventory myInventory = new Inventory(28);
+    private Inventory myInventory = new Inventory(35);
     private Rigidbody2D myRB;
     private Animator myAnim;
     private PlayerStaminaManager playerStamina;

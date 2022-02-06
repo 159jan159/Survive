@@ -5,10 +5,10 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     #region Singleton
-
     public static InventoryManager INSTANCE;
 
-    private void Awake(){
+    private void Awake()
+    {
         INSTANCE = this;
     }
     #endregion
@@ -18,47 +18,58 @@ public class InventoryManager : MonoBehaviour
     private Container currentOpenContainer;
     private ItemStack curDraggedStack = ItemStack.Empty;
     private GameObject spawnedDragStack;
-    private DragedItemStack dragStack;
-
+    private DraggedItemStack dragStack;
 
     private void Start()
     {
-        dragStack = GetComponent<DragedItemStack>();
+        dragStack = GetComponentInChildren<DraggedItemStack>();
     }
 
-    public GameObject getContainerPrefab(string name){
-        foreach (ContainerGetter container in containers)
+    public GameObject getContainerPrefab(string name)
+    {
+        foreach(ContainerGetter container in containers)
         {
-            if (container.containerName == name){
+            if(container.containerName == name)
+            {
                 return container.containerPrefab;
             }
         }
+
         return null;
     }
 
-    public void openContainer(Container container){
-        if (currentOpenContainer != null){
-            currentOpenContainer.closeConteiner();
+    public void openContainer(Container container)
+    {
+        if(currentOpenContainer != null)
+        {
+            currentOpenContainer.closeContainer();
         }
+
         currentOpenContainer = container;
     }
-    public void closeContainer(){
-        if (currentOpenContainer != null){
-            currentOpenContainer.closeConteiner();
+
+    public void closeContainer()
+    {
+        if (currentOpenContainer != null)
+        {
+            currentOpenContainer.closeContainer();
         }
     }
 
-    public ItemStack getDragedItemStack(){
+    public ItemStack getDraggedItemStack()
+    {
         return curDraggedStack;
     }
 
-    public void setDragedItemStack(ItemStack stackIn){
-        dragStack.setDragedStack(curDraggedStack = stackIn);
+    public void setDragedItemStack(ItemStack stackIn)
+    {
+        dragStack.setDraggedStack(curDraggedStack = stackIn);
     }
 }
 
 [System.Serializable]
-public class ContainerGetter{
+public class ContainerGetter
+{
     public string containerName;
     public GameObject containerPrefab;
 }

@@ -13,81 +13,133 @@ public class Slot : MonoBehaviour, IPointerDownHandler
     private Container attachedContainer;
     private InventoryManager inventoryManager;
 
-    public void setSlot(Inventory attachedInventory, int slotID, Container attachedContainer){
+    public void setSlot(Inventory attachedInventory, int slotID, Container attachedContainer)
+    {
         this.slotID = slotID;
         this.attachedContainer = attachedContainer;
         myStack = attachedInventory.getStackInSlot(slotID);
         inventoryManager = InventoryManager.INSTANCE;
         updateSlot();
     }
-    public void updateSlot(){
-        if(!myStack.isEmpty()){
+
+    public void updateSlot()
+    {
+        if(!myStack.isEmpty())
+        {
             itemIcon.enabled = true;
             itemIcon.sprite = myStack.getItem().ItemIcon;
 
-            if (myStack.getCount()>1)
+            if(myStack.getCount() > 1)
             {
                 itemAmount.text = myStack.getCount().ToString();
-            }else{
+            }
+            else
+            {
                 itemAmount.text = string.Empty;
             }
-        }else{
+        }
+        else
+        {
             itemIcon.enabled = false;
             itemAmount.text = string.Empty;
         }
-
     }
 
-    private void setSlotContaints(ItemStack stackIn){
+    private void setSlotContents(ItemStack stackIn)
+    {
         myStack.setStack(stackIn);
         updateSlot();
     }
-        public void OnPointerDown(PointerEventData eventData)
+
+    public void OnPointerDown(PointerEventData eventData)
     {
-        ItemStack curDraggedStack = inventoryManager.getDragedItemStack();
+        ItemStack curDraggedStack = inventoryManager.getDraggedItemStack();
         ItemStack stackCopy = myStack.copy();
 
         if (eventData.pointerId == -1)
         {
             onLeftClick(curDraggedStack, stackCopy);
         }
+
         if (eventData.pointerId == -2)
         {
-            onRightClick();
+            onRightClick(curDraggedStack, stackCopy);
         }
     }
 
-    private void onLeftClick(ItemStack curDragedStack, ItemStack stackCopy){
-        if (!myStack.isEmpty() && curDragedStack.isEmpty())
+    private void onLeftClick(ItemStack curDraggedStack, ItemStack stackCopy)
+    {
+        if(!myStack.isEmpty() && curDraggedStack.isEmpty())
         {
             inventoryManager.setDragedItemStack(stackCopy);
-            this.setSlotContaints(ItemStack.Empty);         
+            this.setSlotContents(ItemStack.Empty);
         }
-        if (myStack.isEmpty() && !curDragedStack.isEmpty())
+
+        if(myStack.isEmpty() && !curDraggedStack.isEmpty())
         {
-            this.setSlotContaints(curDragedStack);     
+            this.setSlotContents(curDraggedStack);
             inventoryManager.setDragedItemStack(ItemStack.Empty);
         }
-        if (!myStack.isEmpty()&& !curDragedStack.isEmpty()){
-            if (ItemStack.areItemsEqual(stackCopy, curDragedStack))
+
+        if(!myStack.isEmpty() && !curDraggedStack.isEmpty())
+        {
+            if(ItemStack.areItemsEqual(stackCopy, curDraggedStack))
             {
-                if (stackCopy.canAddToo(curDragedStack.getCount()))
+                if(stackCopy.canAddToo(curDraggedStack.getCount()))
                 {
-                    stackCopy.increaseAmount(curDragedStack.getCount());
-                    this.setSlotContaints(stackCopy);
+                    stackCopy.increaseAmount(curDraggedStack.getCount());
+                    this.setSlotContents(stackCopy);
                     inventoryManager.setDragedItemStack(ItemStack.Empty);
                 }
-            }else{
-                int difference = (stackCopy.getCount() + curDragedStack.getCount())-stackCopy.getItem().maxStackSize;
-                stackCopy.setCount(myStack.getItem().maxStackSize);
-                ItemStack dragCopy = curDragedStack.copy();
-                dragCopy.setCount(difference);
-                this.setSlotContaints(stackCopy);
-                inventoryManager.setDragedItemStack(dragCopy);
+                else
+                {
+                    int difference = (stackCopy.getCount() + curDraggedStack.getCount()) - stackCopy.getItem().maxStackSize;
+                    stackCopy.setCount(myStack.getItem().maxStackSize);
+                    ItemStack dragCopy = curDraggedStack.copy();
+                    dragCopy.setCount(difference);
+                    this.setSlotContents(stackCopy);
+                    inventoryManager.setDragedItemStack(dragCopy);
+                }
+            }
+            else
+            {
+                ItemStack curDragCopy = curDraggedStack.copy();
+                this.setSlotContents(curDraggedStack);
+                inventoryManager.setDragedItemStack(stackCopy);
             }
         }
     }
-    private void onRightClick(){
 
+    private void onRightClick(ItemStack curDraggedStack, ItemStack stackCopy)
+    {
+        if(!myStack.isEmpty() && curDraggedStack.isEmpty())
+        {
+            ItemStack stack = stackCopy.splitStack((stackCopy.getCount() / 2));
+            inventoryManager.setDragedItemStack(stack);
+            this.setSlotContents(stackCopy);
+        }
+
+        if(myStack.isEmpty() && !curDraggedStack.isEmpty())
+        {
+            this.setSlotContents(new ItemStack(curDraggedStack.getItem(), 1));
+            ItemStack curDragCopy = curDraggedStack.copy();
+            curDragCopy.decreaseAmount(1);
+            inventoryManager.setDragedItemStack(curDragCopy);
+        }
+
+        if(!myStack.isEmpty() && !curDraggedStack.isEmpty())
+        {
+            if(ItemStack.areItemsEqual(stackCopy, curDraggedStack))
+            {
+                if(myStack.canAddToo(1))
+                {
+                    stackCopy.increaseAmount(1);
+                    this.setSlotContents(stackCopy);
+                    ItemStack dragCopy = curDraggedStack.copy();
+                    dragCopy.decreaseAmount(1);
+                    inventoryManager.setDragedItemStack(dragCopy);
+                }
+            }
+        }
     }
 }
