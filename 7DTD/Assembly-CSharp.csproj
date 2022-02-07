@@ -45,13 +45,14 @@
      <Compile Include="Assets\Scripts\EnemyRelated\HurtPlayer.cs" />
      <Compile Include="Assets\Scripts\PlayerRelated\PlayerHealthManager.cs" />
      <Compile Include="Assets\Scripts\PlayerRelated\PlayerStaminaManager.cs" />
+     <Compile Include="Assets\Scripts\ItemRelated\Containers\ContainerPlayerHotbar.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\DraggedItemStack.cs" />
      <Compile Include="Assets\Scripts\EnemyRelated\ZombieController.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\InventoryManager.cs" />
      <Compile Include="Assets\Scripts\PlayerRelated\PlayerController.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Containers\ContainerPlayerInventory.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Containers\Container.cs" />
-     <Compile Include="Assets\Scripts\ItemRelated\Containers\ContainerPlayerHotbar.cs" />
+     <Compile Include="Assets\Scripts\ItemRelated\Containers\ContainerPlayerHotbarSelector.cs" />
      <None Include="Assets\Font\License.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

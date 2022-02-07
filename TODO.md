@@ -5,9 +5,12 @@ TODO vratimrd
 
 - Enemy neposouval hráče
 - 2 druhy enemy -> Základní třída enemy, dědičnost na př. RangedEnemy, MeleeEnemy
+
 - Systém itemů (objektový návrh)
 - sbírání itemů
+
 - Vstup do budovy
+
 - Prozkoumat particle system
 
 

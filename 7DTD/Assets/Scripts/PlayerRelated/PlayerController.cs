@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     private PlayerStaminaManager playerStamina;
     private bool isInventoryOpen;
 
+    private int selectedHotbarIndex = 0;
+
     [SerializeField]
     private float speed;
 
@@ -25,6 +27,8 @@ public class PlayerController : MonoBehaviour
         {
             myInventory.addItem(new ItemStack(item,1));
         }
+        InventoryManager.INSTANCE.openContainer(new ContainerPlayerHotbar(null, myInventory));
+        isInventoryOpen = false;
     }
 
     // Update is called once per frame
@@ -38,7 +42,7 @@ public class PlayerController : MonoBehaviour
                 isInventoryOpen = true;
             }else
             {
-                InventoryManager.INSTANCE.closeContainer();
+                InventoryManager.INSTANCE.openContainer(new ContainerPlayerHotbar(null, myInventory));
                 isInventoryOpen = false;
             }
         }
@@ -46,7 +50,7 @@ public class PlayerController : MonoBehaviour
         {
             if (isInventoryOpen)
             {
-                InventoryManager.INSTANCE.closeContainer();
+                InventoryManager.INSTANCE.openContainer(new ContainerPlayerHotbar(null, myInventory));
                 isInventoryOpen = false;
             }
         }
@@ -72,6 +76,18 @@ public class PlayerController : MonoBehaviour
             myAnim.SetFloat("LastX", Input.GetAxisRaw("Horizontal"));
             myAnim.SetFloat("LastY", Input.GetAxisRaw("Vertical"));
         }
-          
+          updateSelectedHotbarIndex(Input.GetAxis("Mouse ScrollWheel"));
+    }
+    private void updateSelectedHotbarIndex(float direction){
+        if (direction > 0) direction = 1;
+        if (direction < 0) direction = -1;
+
+        for (selectedHotbarIndex -= (int) direction ; selectedHotbarIndex < 0 ; selectedHotbarIndex += 7);
+
+        while(selectedHotbarIndex >= 7)selectedHotbarIndex -= 7;
+    }
+
+    public int getSelectedHotbarIndex(){
+        return selectedHotbarIndex;
     }
 }
