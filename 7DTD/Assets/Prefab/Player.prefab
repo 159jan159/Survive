@@ -236,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  deathScrean: {fileID: 0}
 --- !u!114 &250000160
 MonoBehaviour:
   m_ObjectHideFlags: 0

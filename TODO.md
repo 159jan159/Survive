@@ -1,12 +1,13 @@
-TODO vratimrd
 
 - DONE Hráč nemůže z mapy
 - DONE Kamera neviděla za mapu Cinemachine
+- DONE Respawn
 
-- Enemy neposouval hráče
+- PARTIALLY DONE Enemy neposouval hráče
 - 2 druhy enemy -> Základní třída enemy, dědičnost na př. RangedEnemy, MeleeEnemy
 
-- Systém itemů (objektový návrh)
+- DONE Systém itemů (objektový návrh)
+
 - sbírání itemů
 
 - Vstup do budovy
