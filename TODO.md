@@ -1,18 +1,19 @@
+TODO
 
 - DONE Hráč nemůže z mapy
 - DONE Kamera neviděla za mapu Cinemachine
-- DONE Respawn
 
-- PARTIALLY DONE Enemy neposouval hráče
+- PARTITIALY DONE Enemy neposouval hráče
+
 - 2 druhy enemy -> Základní třída enemy, dědičnost na př. RangedEnemy, MeleeEnemy
 
 - DONE Systém itemů (objektový návrh)
 
-- sbírání itemů
+- TO BE ADDED sbírání itemů
 
-- Vstup do budovy
+- DONE Vstup do budovy
 
-- Prozkoumat particle system
+- WHATCHED YTB Prozkoumat particle system
 
 
 
