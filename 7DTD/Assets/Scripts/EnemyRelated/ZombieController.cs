@@ -5,10 +5,10 @@ using UnityEngine;
 public class ZombieController : MonoBehaviour
 {
 
-    
+    private Rigidbody2D myRB;
+    private Animator myAnim;
 
-    [SerializeField] private GameObject Player;
-    [SerializeField] private float speed = 100f;
+    
     void Start()
     {
         
@@ -17,7 +17,14 @@ public class ZombieController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position,Player.transform.position,speed*Time.deltaTime);
+        //animace
+        myAnim.SetFloat("MoveX", myRB.velocity.x);
+        myAnim.SetFloat("MoveY", myRB.velocity.y);
 
+        //if (Input.GetAxisRaw("Horizontal")==1 || Input.GetAxisRaw("Horizontal")==-1 || Input.GetAxisRaw("Vertical")==1 ||Input.GetAxisRaw("Vertical")==-1)
+        //{
+        //    myAnim.SetFloat("LastX", Input.GetAxisRaw("Horizontal"));
+        //    myAnim.SetFloat("LastY", Input.GetAxisRaw("Vertical"));
+        //}
     }
 }
