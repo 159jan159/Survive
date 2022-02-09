@@ -39,30 +39,17 @@ public class PlayerController : MonoBehaviour
             myInventory.addItem(new ItemStack(item,1));
         }
         InventoryManager.INSTANCE.openContainer(new ContainerPlayerHotbar(null, myInventory));
-        isInventoryOpen = false;
+        InventoryManager.INSTANCE.resetInventoryStatus();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (!isInventoryOpen)
+            if (!InventoryManager.INSTANCE.hasInventoryCurrentlyOpen())
             {
                 InventoryManager.INSTANCE.openContainer(new ContainerPlayerInventory(null, myInventory));
-                isInventoryOpen = true;
-            }else
-            {
-                InventoryManager.INSTANCE.openContainer(new ContainerPlayerHotbar(null, myInventory));
-                isInventoryOpen = false;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (isInventoryOpen)
-            {
-                InventoryManager.INSTANCE.openContainer(new ContainerPlayerHotbar(null, myInventory));
-                isInventoryOpen = false;
             }
         }
         //running if shift
@@ -100,5 +87,9 @@ public class PlayerController : MonoBehaviour
 
     public int getSelectedHotbarIndex(){
         return selectedHotbarIndex;
+    }
+    public Inventory getInventory()
+    {
+        return myInventory;
     }
 }

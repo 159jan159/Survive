@@ -573,7 +573,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5035742500610744254, guid: fcaf0aa5b10131c43b932b98ddbff6a0, type: 3}
   m_PrefabInstance: {fileID: 5035742501276971453}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &992465892
+--- !u!114 &992465889
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 992465888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88015bb3ff05de040b9802cdfa83f91e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c40de80588b039448ed55be902a0a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &995231695 stripped
@@ -904,6 +904,10 @@ PrefabInstance:
     - target: {fileID: -6501962297062386161, guid: f1c8c8ed2bdccc748a51a2ed211c1a82, type: 3}
       propertyPath: m_Name
       value: MainMap
+      objectReference: {fileID: 0}
+    - target: {fileID: -6501962297062386161, guid: f1c8c8ed2bdccc748a51a2ed211c1a82, type: 3}
+      propertyPath: m_TagString
+      value: Map
       objectReference: {fileID: 0}
     - target: {fileID: -4974812652292296965, guid: f1c8c8ed2bdccc748a51a2ed211c1a82, type: 3}
       propertyPath: m_Layer

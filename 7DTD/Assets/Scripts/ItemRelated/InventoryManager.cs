@@ -15,14 +15,50 @@ public class InventoryManager : MonoBehaviour
 
     public GameObject slotPrefab;
     public List<ContainerGetter> containers = new List<ContainerGetter>();
+    public MonoBehaviour[] stuffToDisable;
     private Container currentOpenContainer;
     private ItemStack curDraggedStack = ItemStack.Empty;
     private GameObject spawnedDragStack;
     private DraggedItemStack dragStack;
+    private PlayerController player;
+    private bool hasInventoryOpen = false;
 
     private void Start()
     {
+        player = FindObjectOfType<PlayerController>();
         dragStack = GetComponentInChildren<DraggedItemStack>();
+    }
+
+    private void Update()
+    {
+        if(hasInventoryOpen)
+        {
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                openContainer(new ContainerPlayerHotbar(null, player.getInventory()));
+                hasInventoryOpen = false;
+
+                foreach (MonoBehaviour obj in stuffToDisable)
+                {
+                    obj.enabled = true;
+                }
+            }
+        }
+    }
+
+    public bool hasInventoryCurrentlyOpen()
+    {
+        return hasInventoryOpen;
+    }
+
+    public void resetInventoryStatus()
+    {
+        hasInventoryOpen = false;
+        
+        foreach (MonoBehaviour obj in stuffToDisable)
+        {
+            obj.enabled = true;
+        }
     }
 
     public GameObject getContainerPrefab(string name)
@@ -46,6 +82,13 @@ public class InventoryManager : MonoBehaviour
         }
 
         currentOpenContainer = container;
+
+        hasInventoryOpen = true;
+
+        foreach(MonoBehaviour obj in stuffToDisable)
+        {
+            obj.enabled = false;
+        }
     }
 
     public void closeContainer()
@@ -53,6 +96,14 @@ public class InventoryManager : MonoBehaviour
         if (currentOpenContainer != null)
         {
             currentOpenContainer.closeContainer();
+        }
+
+        hasInventoryOpen = false;
+
+
+        foreach (MonoBehaviour obj in stuffToDisable)
+        {
+            obj.enabled = true;
         }
     }
 
@@ -65,6 +116,7 @@ public class InventoryManager : MonoBehaviour
     {
         dragStack.setDraggedStack(curDraggedStack = stackIn);
     }
+
 }
 
 [System.Serializable]
