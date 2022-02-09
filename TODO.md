@@ -1,17 +1,19 @@
-TODO vratimrd
+TODO
 
 - DONE Hráč nemůže z mapy
 - DONE Kamera neviděla za mapu Cinemachine
 
-- Enemy neposouval hráče
+- PARTITIALY DONE Enemy neposouval hráče
+
 - 2 druhy enemy -> Základní třída enemy, dědičnost na př. RangedEnemy, MeleeEnemy
 
-- Systém itemů (objektový návrh)
-- sbírání itemů
+- DONE Systém itemů (objektový návrh)
 
-- Vstup do budovy
+- TO BE ADDED sbírání itemů
 
-- Prozkoumat particle system
+- DONE Vstup do budovy
+
+- WHATCHED YTB Prozkoumat particle system
 
 
 

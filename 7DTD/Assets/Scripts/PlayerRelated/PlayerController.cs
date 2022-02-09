@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     private int selectedHotbarIndex = 0;
 
+    private static bool isPlayerExists;
+
     [SerializeField]
     private float speed;
 
@@ -22,6 +24,15 @@ public class PlayerController : MonoBehaviour
         myRB = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
         playerStamina = GetComponent<PlayerStaminaManager>();
+
+        if (!isPlayerExists)
+        {
+            isPlayerExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }else
+        {
+            Destroy(gameObject);
+        }        
 
         foreach (Item item in itemsToAdd)
         {

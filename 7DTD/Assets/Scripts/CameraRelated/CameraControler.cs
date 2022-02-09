@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class CameraControler : MonoBehaviour
 {
-    public Transform target;
+    private static bool exisits;
     // Start is called before the first frame update
     void Start()
     {
+        if (!exisits)
+        {
+            exisits = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }else
+        {
+            Destroy(gameObject);
+        }
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position =  new Vector3(target.transform.position.x,target.transform.position.y,transform.position.z);
     }
 }

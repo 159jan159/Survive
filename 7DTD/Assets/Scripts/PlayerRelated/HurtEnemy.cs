@@ -15,10 +15,8 @@ public class HurtEnemy : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnMouseDown()
     {
-        if(other.gameObject.tag == "Enemy"){
-            Destroy(other.gameObject);
-        }
+        Destroy(gameObject);
     }
 }
