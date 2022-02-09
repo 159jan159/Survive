@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthManager : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
 
-    public GameObject deathScrean;
+    private Respawn deathScrean;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        FindRespawn();
+    }
 
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        FindRespawn();
+    }
+
+    private void FindRespawn() {
+
+        deathScrean = FindObjectOfType<Respawn>(true);
     }
 
     // Update is called once per frame
@@ -21,7 +32,7 @@ public class PlayerHealthManager : MonoBehaviour
         if (currentHealth <= 0)
         {
             gameObject.SetActive(false);
-            deathScrean.SetActive(true);
+            deathScrean.gameObject.SetActive(true);
         }
     }
 
