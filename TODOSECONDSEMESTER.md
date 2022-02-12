@@ -1,4 +1,4 @@
-Enemy
+﻿Enemy
     vylepšit AI
     nechat je běžet za hráčem jen pokud je hráč blíž k nim
     animace utoku
@@ -10,14 +10,14 @@ Combat system
     hráč uděluje damage pouze nepřátelům v dosahu zbraně 
     přidání střelných zbraní
 
-Colecting system
+Collecting system
     dokončení otevírání containerů
     kácení stromů
 
 Těžební systém
     vstup do něj
     náhodně generované patra
-    zombíci na patrech čím níže tím víc
+    zombíci na patrech - čím níže tím víc
 
 Crafting systém
-    
+    Vytvoření nápovědy – z čeho věci vyrobit atd
