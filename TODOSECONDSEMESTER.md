@@ -21,3 +21,8 @@ Těžební systém
 
 Crafting systém
     Vytvoření nápovědy – z čeho věci vyrobit atd
+
+Trador
+    UI 
+    obchod možnost prodat a zakoupit itemy 
+    questy možná 
