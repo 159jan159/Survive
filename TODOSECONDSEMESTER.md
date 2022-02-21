@@ -14,15 +14,15 @@ Collecting system
     dokončení otevírání containerů
     kácení stromů
 
+Crafting systém
+    Vytvoření nápovědy – z čeho věci vyrobit atd
+
 Těžební systém
     vstup do něj
     náhodně generované patra
     zombíci na patrech - čím níže tím víc
 
-Crafting systém
-    Vytvoření nápovědy – z čeho věci vyrobit atd
-
 Trador
     UI 
     obchod možnost prodat a zakoupit itemy 
-    questy možná 
+    questy
