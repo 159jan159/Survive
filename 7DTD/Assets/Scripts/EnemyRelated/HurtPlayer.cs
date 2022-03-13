@@ -30,16 +30,20 @@ public class HurtPlayer : MonoBehaviour
     {
         float distance = Vector2.Distance(transform.position, target.position);
         
-        if (distance<1)
+        if (distance<0.5f)
         {
             waitToHurt -= Time.deltaTime;
              if (waitToHurt <= 0)
              {
-                 PHM.getDamage(damage);
-                 
+                 myAnim.SetBool("Attack",true);
+                 PHM.getDamage(damage);                 
                  waitToHurt = 1f;
              }
-        }
+
+        }else
+             {
+                 myAnim.SetBool("Attack",false);
+             }
         
     }
 
