@@ -9,6 +9,7 @@ public class HurtPlayer : MonoBehaviour
     private Transform target;
     private PlayerHealthManager PHM;
     private float waitToHurt = 0f;
+    private Animator myAnim;
     void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -21,6 +22,7 @@ public class HurtPlayer : MonoBehaviour
     private void Findtarget() {
         target = GameObject.FindWithTag("Player").transform;
         PHM = FindObjectOfType<PlayerHealthManager>();
+        myAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class HurtPlayer : MonoBehaviour
              if (waitToHurt <= 0)
              {
                  PHM.getDamage(damage);
+                 
                  waitToHurt = 1f;
              }
         }
