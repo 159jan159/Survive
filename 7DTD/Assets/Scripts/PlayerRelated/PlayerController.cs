@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,9 +22,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myRB = GetComponent<Rigidbody2D>();
-        myAnim = GetComponent<Animator>();
-        playerStamina = GetComponent<PlayerStaminaManager>();
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        findStuff();        
 
         if (!isPlayerExists)
         {
@@ -38,6 +38,17 @@ public class PlayerController : MonoBehaviour
         {
             myInventory.addItem(new ItemStack(item,1));
         }
+        
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        findStuff();        
+    }
+
+    public void findStuff(){
+        myRB = GetComponent<Rigidbody2D>();
+        myAnim = GetComponent<Animator>();
+        playerStamina = GetComponent<PlayerStaminaManager>();
         InventoryManager.INSTANCE.openContainer(new ContainerPlayerHotbar(null, myInventory));
         InventoryManager.INSTANCE.resetInventoryStatus();
     }
