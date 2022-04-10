@@ -67,7 +67,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && playerStamina.currentStamina > 0){
             playerStamina.canRegen = false;
             speed = 1000f;
-            Debug.Log(1*Time.deltaTime);
             playerStamina.loseStamina(3*Time.deltaTime);
         }else{
             playerStamina.canRegen = true;
