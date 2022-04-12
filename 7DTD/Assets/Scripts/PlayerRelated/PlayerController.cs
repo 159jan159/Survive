@@ -23,7 +23,15 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        findStuff();        
+        findStuff();  
+        
+        foreach(Item item in itemsToAdd)
+        {
+            myInventory.addItem(new ItemStack(item, 1));
+        }
+        InventoryManager.INSTANCE.openContainer(new ContainerPlayerHotbar(null, myInventory));
+        InventoryManager.INSTANCE.resetInventoryStatus();
+              
 
         if (!isPlayerExists)
         {
@@ -34,10 +42,6 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }        
 
-        foreach (Item item in itemsToAdd)
-        {
-            myInventory.addItem(new ItemStack(item,1));
-        }
         
     }
 
@@ -54,8 +58,17 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void Update()
+    private void FixedUpdate()
     {
+        //pohyb
+        //myRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical")).normalize*speed*Time.deltaTime; 
+        float xS = Input.GetAxisRaw("Horizontal");
+        float yS = Input.GetAxisRaw("Vertical");
+
+        myRB.velocity = new Vector2(xS,yS).normalized*speed*Time.deltaTime;
+
+    }
+    private void Update(){
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (!InventoryManager.INSTANCE.hasInventoryCurrentlyOpen())
@@ -66,15 +79,13 @@ public class PlayerController : MonoBehaviour
         //running if shift
         if (Input.GetKey(KeyCode.LeftShift) && playerStamina.currentStamina > 0){
             playerStamina.canRegen = false;
-            speed = 1000f;
+            speed = 500f;
             playerStamina.loseStamina(3*Time.deltaTime);
         }else{
             playerStamina.canRegen = true;
-            speed = 800f;
+            speed = 200f;
         }
 
-        //pohyb
-        myRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical")).normalized*speed*Time.deltaTime;        
         //animace
         myAnim.SetFloat("MoveX", myRB.velocity.x);
         myAnim.SetFloat("MoveY", myRB.velocity.y);
