@@ -13,12 +13,11 @@ public class Chest : MonoBehaviour
         player = FindObjectOfType<PlayerController>();
         inventoryManager = InventoryManager.INSTANCE;
     }
-
-    private void OnMouseOver()
+    void Update()
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
 
-        if(distance <= 2 && !inventoryManager.hasInventoryCurrentlyOpen())
+        if(distance <= 1 && !inventoryManager.hasInventoryCurrentlyOpen())
         {
             if(Input.GetMouseButtonDown(1))//Right Click
             {

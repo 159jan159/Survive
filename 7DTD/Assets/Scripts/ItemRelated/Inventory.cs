@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory
 {
-     private List<ItemStack> inventoryContents = new List<ItemStack>();
+    private List<ItemStack> inventoryContents = new List<ItemStack>();
 
     public Inventory(int size)
     {

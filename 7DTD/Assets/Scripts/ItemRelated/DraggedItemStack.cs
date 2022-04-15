@@ -46,12 +46,6 @@ public class DraggedItemStack : MonoBehaviour
     private void Update()
     {
         drawStack();
-        Vector3 poshelp = Input.mousePosition;
-
-        poshelp.x -= 50;
-        
-        poshelp.y += 50;
-
-        transform.position = poshelp;
+        transform.position = Input.mousePosition;
     }
 }

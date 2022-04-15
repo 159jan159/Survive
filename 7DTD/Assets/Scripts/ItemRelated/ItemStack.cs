@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemStack
 {
-   public static ItemStack Empty = new ItemStack();
+    public static ItemStack Empty = new ItemStack();
     public Item item;
     public int count;
     public int slotID;
@@ -102,4 +102,3 @@ public class ItemStack
         return stackA == stackB ? true : (!stackA.isEmpty() && !stackB.isEmpty() ? stackA.isItemEqual(stackB) : false);
     }
 }
-

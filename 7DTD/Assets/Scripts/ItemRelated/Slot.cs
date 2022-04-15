@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class Slot : MonoBehaviour, IPointerDownHandler
+public class Slot : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public Image itemIcon;
     public Text itemAmount;
@@ -67,18 +67,26 @@ public class Slot : MonoBehaviour, IPointerDownHandler
         }
     }
 
+    private void setTooltip(string nameIn)
+    {
+        inventoryManager.drawToolTip(nameIn);
+    }
+
     private void onLeftClick(ItemStack curDraggedStack, ItemStack stackCopy)
     {
+        Debug.Log("Click");
         if(!myStack.isEmpty() && curDraggedStack.isEmpty())
         {
             inventoryManager.setDragedItemStack(stackCopy);
             this.setSlotContents(ItemStack.Empty);
+            setTooltip(string.Empty);
         }
 
         if(myStack.isEmpty() && !curDraggedStack.isEmpty())
         {
             this.setSlotContents(curDraggedStack);
             inventoryManager.setDragedItemStack(ItemStack.Empty);
+            setTooltip(myStack.getItem().ItemName);
         }
 
         if(!myStack.isEmpty() && !curDraggedStack.isEmpty())
@@ -90,6 +98,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler
                     stackCopy.increaseAmount(curDraggedStack.getCount());
                     this.setSlotContents(stackCopy);
                     inventoryManager.setDragedItemStack(ItemStack.Empty);
+                    setTooltip(myStack.getItem().ItemName);
                 }
                 else
                 {
@@ -99,6 +108,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler
                     dragCopy.setCount(difference);
                     this.setSlotContents(stackCopy);
                     inventoryManager.setDragedItemStack(dragCopy);
+                    setTooltip(string.Empty);
                 }
             }
             else
@@ -106,6 +116,8 @@ public class Slot : MonoBehaviour, IPointerDownHandler
                 ItemStack curDragCopy = curDraggedStack.copy();
                 this.setSlotContents(curDraggedStack);
                 inventoryManager.setDragedItemStack(stackCopy);
+                setTooltip(string.Empty);
+
             }
         }
     }
@@ -117,6 +129,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler
             ItemStack stack = stackCopy.splitStack((stackCopy.getCount() / 2));
             inventoryManager.setDragedItemStack(stack);
             this.setSlotContents(stackCopy);
+            setTooltip(string.Empty);
         }
 
         if(myStack.isEmpty() && !curDraggedStack.isEmpty())
@@ -125,6 +138,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler
             ItemStack curDragCopy = curDraggedStack.copy();
             curDragCopy.decreaseAmount(1);
             inventoryManager.setDragedItemStack(curDragCopy);
+            setTooltip(string.Empty);
         }
 
         if(!myStack.isEmpty() && !curDraggedStack.isEmpty())
@@ -138,8 +152,24 @@ public class Slot : MonoBehaviour, IPointerDownHandler
                     ItemStack dragCopy = curDraggedStack.copy();
                     dragCopy.decreaseAmount(1);
                     inventoryManager.setDragedItemStack(dragCopy);
+                    setTooltip(string.Empty);
                 }
             }
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        ItemStack curDraggedStack = inventoryManager.getDraggedItemStack();
+
+        if(!myStack.isEmpty() && curDraggedStack.isEmpty())
+        {
+            setTooltip(myStack.getItem().ItemName);
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        setTooltip(string.Empty);
     }
 }
