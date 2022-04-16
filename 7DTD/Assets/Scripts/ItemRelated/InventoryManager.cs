@@ -20,6 +20,7 @@ public class InventoryManager : MonoBehaviour
     private ItemStack curDraggedStack = ItemStack.Empty;
     private GameObject spawnedDragStack;
     private DraggedItemStack dragStack;
+    private Tooltip tooltip;
     private PlayerController player;
     private bool hasInventoryOpen = false;
 
@@ -27,6 +28,7 @@ public class InventoryManager : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>();
         dragStack = GetComponentInChildren<DraggedItemStack>();
+        tooltip = GetComponentInChildren<Tooltip>();
     }
 
     private void Update()
@@ -117,6 +119,10 @@ public class InventoryManager : MonoBehaviour
         dragStack.setDraggedStack(curDraggedStack = stackIn);
     }
 
+    public void drawToolTip(string itemName)
+    {
+        tooltip.setTooltip(itemName);
+    }
 }
 
 [System.Serializable]

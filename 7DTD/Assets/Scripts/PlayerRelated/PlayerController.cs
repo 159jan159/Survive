@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public Item[] itemsToAdd;
+
+    public SpriteRenderer itemInHand;
     private Inventory myInventory = new Inventory(35);
     private Rigidbody2D myRB;
     private Animator myAnim;
@@ -13,6 +15,17 @@ public class PlayerController : MonoBehaviour
     private bool isInventoryOpen;
 
     private int selectedHotbarIndex = 0;
+
+    private KeyCode[] hotbarControls = new KeyCode[]
+    {
+        KeyCode.Alpha1,
+        KeyCode.Alpha2,
+        KeyCode.Alpha3,
+        KeyCode.Alpha4,
+        KeyCode.Alpha5,
+        KeyCode.Alpha6,
+        KeyCode.Alpha7
+    };
 
     private static bool isPlayerExists;
 
@@ -69,13 +82,6 @@ public class PlayerController : MonoBehaviour
 
     }
     private void Update(){
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (!InventoryManager.INSTANCE.hasInventoryCurrentlyOpen())
-            {
-                InventoryManager.INSTANCE.openContainer(new ContainerPlayerInventory(null, myInventory));
-            }
-        }
         //running if shift
         if (Input.GetKey(KeyCode.LeftShift) && playerStamina.currentStamina > 0){
             playerStamina.canRegen = false;
@@ -85,7 +91,6 @@ public class PlayerController : MonoBehaviour
             playerStamina.canRegen = true;
             speed = 200f;
         }
-
         //animace
         myAnim.SetFloat("MoveX", myRB.velocity.x);
         myAnim.SetFloat("MoveY", myRB.velocity.y);
@@ -95,7 +100,25 @@ public class PlayerController : MonoBehaviour
             myAnim.SetFloat("LastX", Input.GetAxisRaw("Horizontal"));
             myAnim.SetFloat("LastY", Input.GetAxisRaw("Vertical"));
         }
-          updateSelectedHotbarIndex(Input.GetAxis("Mouse ScrollWheel"));
+        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (!InventoryManager.INSTANCE.hasInventoryCurrentlyOpen())
+            {
+                InventoryManager.INSTANCE.openContainer(new ContainerPlayerInventory(null, myInventory));
+            }
+        }
+
+        updateSelectedHotbarIndex(Input.GetAxis("Mouse ScrollWheel"));
+
+        for(int i = 0; i < hotbarControls.Length; i++)
+        {
+            if(Input.GetKeyDown(hotbarControls[i]))
+            {
+                selectedHotbarIndex = i;
+                swapItem();
+            }
+        }
     }
     private void updateSelectedHotbarIndex(float direction){
         if (direction > 0) direction = 1;
@@ -104,6 +127,7 @@ public class PlayerController : MonoBehaviour
         for (selectedHotbarIndex -= (int) direction ; selectedHotbarIndex < 0 ; selectedHotbarIndex += 7);
 
         while(selectedHotbarIndex >= 7)selectedHotbarIndex -= 7;
+        swapItem();
     }
 
     public int getSelectedHotbarIndex(){
@@ -112,5 +136,8 @@ public class PlayerController : MonoBehaviour
     public Inventory getInventory()
     {
         return myInventory;
+    }
+    private void swapItem(){
+        itemInHand.sprite = myInventory.getStackInSlot(selectedHotbarIndex).item.ItemIcon;
     }
 }

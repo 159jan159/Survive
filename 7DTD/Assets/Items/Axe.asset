@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0523810a1a54f2744a760080d82daead, type: 3}
   m_Name: Axe
   m_EditorClassIdentifier: 
-  ItemName: Axe
+  ItemName: Stone Axe
   ItemIcon: {fileID: 8699069900992395679, guid: 40f1e443b5a4e4248b17516145be74c5, type: 3}
   maxStackSize: 1
