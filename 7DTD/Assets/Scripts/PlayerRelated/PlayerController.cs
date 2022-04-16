@@ -138,6 +138,13 @@ public class PlayerController : MonoBehaviour
         return myInventory;
     }
     private void swapItem(){
-        itemInHand.sprite = myInventory.getStackInSlot(selectedHotbarIndex).item.ItemIcon;
+        if (myInventory.getStackInSlot(selectedHotbarIndex).isEmpty())
+        {
+            itemInHand.enabled = false;
+        }else
+        {
+            itemInHand.enabled = true;
+            itemInHand.sprite = myInventory.getStackInSlot(selectedHotbarIndex).item.ItemIcon;
+        }        
     }
 }
