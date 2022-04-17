@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Interier1.unity
     guid: b077796e666004a418745bff74e31617
+  - enabled: 1
+    path: Assets/Scenes/Interier2.unity
+    guid: 95a3147d348b9b14892f09feae889880
+  - enabled: 1
+    path: Assets/Scenes/scene2.unity
+    guid: 2b6feefd8ada34a49ad537ea16c13758
+  - enabled: 1
+    path: Assets/Scenes/start.unity
+    guid: bc51abd11e00e214b9c6e4afc748292f
   m_configObjects: {}

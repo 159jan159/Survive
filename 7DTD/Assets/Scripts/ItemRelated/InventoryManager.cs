@@ -23,12 +23,21 @@ public class InventoryManager : MonoBehaviour
     private Tooltip tooltip;
     private PlayerController player;
     private bool hasInventoryOpen = false;
+    private static bool invExists;
 
     private void Start()
     {
         player = FindObjectOfType<PlayerController>();
         dragStack = GetComponentInChildren<DraggedItemStack>();
         tooltip = GetComponentInChildren<Tooltip>();
+        if (!invExists)
+        {
+            invExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }else
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void Update()

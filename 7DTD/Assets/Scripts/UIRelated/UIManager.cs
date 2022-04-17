@@ -11,10 +11,18 @@ public class UIManager : MonoBehaviour
     public Slider staminaBar;
     public Text StaminaText;
     public PlayerStaminaManager playerStamina;
+    public static bool uiExists;
 
     void Start()
     {
-        
+        if (!uiExists)
+        {
+            uiExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }else
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

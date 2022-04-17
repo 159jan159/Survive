@@ -119,6 +119,8 @@ MonoBehaviour:
     containerPrefab: {fileID: 8671645653678060870, guid: 1d27820b165c694428a6405fc0fd1061, type: 3}
   - containerName: Player Hotbar
     containerPrefab: {fileID: 7743065771392618692, guid: ec61cfebd10718242be195d6c56f6ad7, type: 3}
+  - containerName: Chest Inventory
+    containerPrefab: {fileID: 373167824229210092, guid: 2b080362cb7fc4347a24db833dd3ef76, type: 3}
   stuffToDisable: []
 --- !u!1 &5401638963460923777
 GameObject:

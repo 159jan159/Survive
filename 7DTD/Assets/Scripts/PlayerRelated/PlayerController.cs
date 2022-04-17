@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        
         findStuff();  
         
         foreach(Item item in itemsToAdd)
@@ -45,36 +46,35 @@ public class PlayerController : MonoBehaviour
         InventoryManager.INSTANCE.openContainer(new ContainerPlayerHotbar(null, myInventory));
         InventoryManager.INSTANCE.resetInventoryStatus();
               
-
         if (!isPlayerExists)
         {
             isPlayerExists = true;
-            DontDestroyOnLoad(transform.gameObject);
+            DontDestroyOnLoad(gameObject);
         }else
         {
             Destroy(gameObject);
-        }        
+        } 
+    
 
         
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-        findStuff();        
+        findStuff();    
+  
     }
 
     public void findStuff(){
         myRB = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
         playerStamina = GetComponent<PlayerStaminaManager>();
-        InventoryManager.INSTANCE.openContainer(new ContainerPlayerHotbar(null, myInventory));
-        InventoryManager.INSTANCE.resetInventoryStatus();
+
     }
 
     // Update is called once per frame
     private void FixedUpdate()
     {
         //pohyb
-        //myRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical")).normalize*speed*Time.deltaTime; 
         float xS = Input.GetAxisRaw("Horizontal");
         float yS = Input.GetAxisRaw("Vertical");
 

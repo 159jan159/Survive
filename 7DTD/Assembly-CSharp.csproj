@@ -39,10 +39,9 @@
      <Compile Include="Assets\Scripts\CameraRelated\CameraControler.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Inventory.cs" />
      <Compile Include="Assets\Scripts\StayForSceneSwap.cs" />
+     <Compile Include="Assets\Scripts\ItemRelated\ItemList.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Containers\ContainerPlayerHotbarSelector.cs" />
      <Compile Include="Assets\Scripts\HouseRelated\EnteredDoor.cs" />
-     <Compile Include="Assets\Scripts\UIRelated\UIStayForSceneSwap.cs" />
-     <Compile Include="Assets\Scripts\ItemRelated\InventoryStayForSceneSwap.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Item.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Tooltip.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Slot.cs" />
@@ -68,7 +67,7 @@
      <Compile Include="Assets\Scripts\ItemRelated\Containers\ContainerPlayerInventory.cs" />
      <Compile Include="Assets\Art\Interier\Map.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Containers\Container.cs" />
-     <Compile Include="Assets\Scripts\ItemRelated\ItemList.cs" />
+     <Compile Include="Assets\startGame.cs" />
      <None Include="Assets\Font\License.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.29f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
