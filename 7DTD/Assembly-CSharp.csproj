@@ -61,13 +61,16 @@
      <Compile Include="Assets\Scripts\EnemyRelated\ZombieController.cs" />
      <Compile Include="Assets\Scripts\PlayerRelated\PlayerStartPoint.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\InventoryManager.cs" />
+     <Compile Include="Assets\startGame.cs" />
      <Compile Include="Assets\Scripts\PlayerRelated\PlayerController.cs" />
      <Compile Include="Assets\Scripts\SortingLayerRelated\SetSoringLayer.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Chests\Chest.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Containers\ContainerPlayerInventory.cs" />
-     <Compile Include="Assets\Art\Interier\Map.cs" />
+     <Compile Include="Assets\Animations\Art\Interier\Map.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Containers\Container.cs" />
-     <Compile Include="Assets\startGame.cs" />
+     <Compile Include="Assets\setConfiner.cs" />
+     <Compile Include="Assets\DestroyGameObject.cs" />
+     <Compile Include="Assets\hittingTree.cs" />
      <None Include="Assets\Font\License.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.29f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

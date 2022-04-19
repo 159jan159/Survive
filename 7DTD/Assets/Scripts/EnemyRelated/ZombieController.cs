@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Pathfinding;
+using UnityEngine.UI;
 
 public class ZombieController : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class ZombieController : MonoBehaviour
     private Transform target;
     private AIDestinationSetter setter;
     private AIPath path;
+    public Slider ZheltBar;
+    public int Zhealth;
+    public GameObject blood;
 
     private Vector3 dir;
 
@@ -18,6 +22,7 @@ public class ZombieController : MonoBehaviour
         myAnim = GetComponent<Animator>();
         SceneManager.sceneLoaded += OnSceneLoaded;
         Findtarget();
+        ZheltBar.maxValue = Zhealth;
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         Findtarget();
@@ -26,7 +31,7 @@ public class ZombieController : MonoBehaviour
     private void Findtarget() {
         target = GameObject.FindWithTag("Player").transform;
         setter = GetComponent<AIDestinationSetter>();
-        path = GetComponent<AIPath>();
+        path = GetComponent<AIPath>();       
         setter.target = target;
 
     }
@@ -51,6 +56,17 @@ public class ZombieController : MonoBehaviour
         }
 
 
+    }
+    void OnMouseDown()
+    {
+        if (Zhealth > 0)
+        {
+            Zhealth -= 10;
+            ZheltBar.value = Zhealth;
+            Instantiate(blood, transform.position, Quaternion.identity);
+        }else{
+            Destroy(gameObject);
+        }
     }
 
 

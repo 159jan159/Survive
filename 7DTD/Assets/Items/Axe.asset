@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Stone Axe
   ItemIcon: {fileID: 8699069900992395679, guid: 40f1e443b5a4e4248b17516145be74c5, type: 3}
+  ItemType: 2
+  Damage: 1
   maxStackSize: 1

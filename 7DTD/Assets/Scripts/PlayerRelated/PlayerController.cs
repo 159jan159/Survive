@@ -8,11 +8,12 @@ public class PlayerController : MonoBehaviour
     public Item[] itemsToAdd;
 
     public SpriteRenderer itemInHand;
-    private Inventory myInventory = new Inventory(35);
+    public Inventory myInventory = new Inventory(35);
     private Rigidbody2D myRB;
-    private Animator myAnim;
+    public Animator myAnim;
     private PlayerStaminaManager playerStamina;
     private bool isInventoryOpen;
+    public Item itemHeld;
 
     private int selectedHotbarIndex = 0;
 
@@ -140,11 +141,19 @@ public class PlayerController : MonoBehaviour
     private void swapItem(){
         if (myInventory.getStackInSlot(selectedHotbarIndex).isEmpty())
         {
+                        Debug.Log("setting true");
+            myAnim.SetBool("Tool", false);
             itemInHand.enabled = false;
-        }else
+
+        }
+        else
         {
+            Debug.Log("setting false");
+            myAnim.SetBool("Tool", true);
+            itemHeld = myInventory.getStackInSlot(selectedHotbarIndex).item;
             itemInHand.enabled = true;
             itemInHand.sprite = myInventory.getStackInSlot(selectedHotbarIndex).item.ItemIcon;
         }        
     }
 }
+
