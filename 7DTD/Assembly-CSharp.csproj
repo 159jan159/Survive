@@ -37,24 +37,31 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraRelated\CameraControler.cs" />
+     <Compile Include="Assets\setConfiner.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Inventory.cs" />
      <Compile Include="Assets\Scripts\StayForSceneSwap.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\ItemList.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Containers\ContainerPlayerHotbarSelector.cs" />
+     <Compile Include="Assets\DestroyGameObject.cs" />
      <Compile Include="Assets\Scripts\HouseRelated\EnteredDoor.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Item.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Tooltip.cs" />
+     <Compile Include="Assets\hittingTree.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Slot.cs" />
      <Compile Include="Assets\Scripts\UIRelated\UIManager.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\ItemStack.cs" />
      <Compile Include="Assets\Scripts\PlayerRelated\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\CameraRelated\CameraSetter.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Containers\ContainerChest.cs" />
+     <Compile Include="Assets\Scripts\Map\RandomWalkGenerator.cs" />
      <Compile Include="Assets\Scripts\EnemyRelated\HurtPlayer.cs" />
      <Compile Include="Assets\Scripts\PlayerRelated\PlayerHealthManager.cs" />
      <Compile Include="Assets\Scripts\PlayerRelated\PlayerStaminaManager.cs" />
+     <Compile Include="Assets\Scripts\Map\ProceduralGeneration.cs" />
      <Compile Include="Assets\Scripts\LoadNewArea.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Containers\ContainerPlayerHotbar.cs" />
+     <Compile Include="Assets\Scripts\Map\TilemapVisualizer.cs" />
+     <Compile Include="Assets\Scripts\Map\WallGenerator.cs" />
      <Compile Include="Assets\Scripts\PlayerRelated\HurtEnemy.cs" />
      <Compile Include="Assets\Scripts\UIRelated\Respawn.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\DraggedItemStack.cs" />
@@ -68,9 +75,25 @@
      <Compile Include="Assets\Scripts\ItemRelated\Containers\ContainerPlayerInventory.cs" />
      <Compile Include="Assets\Animations\Art\Interier\Map.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Containers\Container.cs" />
-     <Compile Include="Assets\setConfiner.cs" />
-     <Compile Include="Assets\DestroyGameObject.cs" />
-     <Compile Include="Assets\hittingTree.cs" />
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+     <Compile Include="Assets\Scripts\Map\ProceduralGeneration.cs" />
+     <Compile Include="Assets\Scripts\Map\RandomWalkGenerator.cs" />
+     <Compile Include="Assets\Scripts\Map\TilemapVisualizer.cs" />
+     <Compile Include="Assets\Scripts\Map\WallGenerator.cs" />
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
      <None Include="Assets\Font\License.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.29f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
