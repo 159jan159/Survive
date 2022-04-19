@@ -77,7 +77,10 @@
      <Compile Include="Assets\Scripts\ItemRelated\Containers\Container.cs" />
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
      <Compile Include="Assets\Scripts\Map\ProceduralGeneration.cs" />
@@ -85,6 +88,9 @@
      <Compile Include="Assets\Scripts\Map\TilemapVisualizer.cs" />
      <Compile Include="Assets\Scripts\Map\WallGenerator.cs" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
