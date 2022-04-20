@@ -73,27 +73,8 @@
      <Compile Include="Assets\Scripts\SortingLayerRelated\SetSoringLayer.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Chests\Chest.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Containers\ContainerPlayerInventory.cs" />
-     <Compile Include="Assets\Animations\Art\Interier\Map.cs" />
+     <Compile Include="Assets\Art\Interier\Map.cs" />
      <Compile Include="Assets\Scripts\ItemRelated\Containers\Container.cs" />
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-     <Compile Include="Assets\Scripts\Map\ProceduralGeneration.cs" />
-     <Compile Include="Assets\Scripts\Map\RandomWalkGenerator.cs" />
-     <Compile Include="Assets\Scripts\Map\TilemapVisualizer.cs" />
-     <Compile Include="Assets\Scripts\Map\WallGenerator.cs" />
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
      <None Include="Assets\Font\License.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.29f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

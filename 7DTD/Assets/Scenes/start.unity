@@ -357,8 +357,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 711461640112867949, guid: 81f80ca0824f98d4991a757b6e00c6d8, type: 3}
       propertyPath: itemsToAdd.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 711461640112867949, guid: 81f80ca0824f98d4991a757b6e00c6d8, type: 3}
+      propertyPath: itemsToAdd.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 93ec9cdd22cfc6e4183832c671805391, type: 2}
     - target: {fileID: 711461640112867949, guid: 81f80ca0824f98d4991a757b6e00c6d8, type: 3}
       propertyPath: itemsToAdd.Array.data[3]
       value: 
@@ -367,6 +371,10 @@ PrefabInstance:
       propertyPath: itemsToAdd.Array.data[4]
       value: 
       objectReference: {fileID: 11400000, guid: b4f3ba5e947ac6a4da15a96ca93965f4, type: 2}
+    - target: {fileID: 711461640112867949, guid: 81f80ca0824f98d4991a757b6e00c6d8, type: 3}
+      propertyPath: itemsToAdd.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 66afdde855228ea469c8a2b0e2ce82d5, type: 2}
     - target: {fileID: 711461640112867950, guid: 81f80ca0824f98d4991a757b6e00c6d8, type: 3}
       propertyPath: m_Name
       value: Player
@@ -430,15 +438,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8368258348382811142, guid: 45ee3eea2cf061c478c486574ec4a6f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7263173
+      value: -1.1253792
       objectReference: {fileID: 0}
     - target: {fileID: 8368258348382811142, guid: 45ee3eea2cf061c478c486574ec4a6f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7398638
+      value: 1.9814575
       objectReference: {fileID: 0}
     - target: {fileID: 8368258348382811142, guid: 45ee3eea2cf061c478c486574ec4a6f9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.8268585
+      value: -15.375125
       objectReference: {fileID: 0}
     - target: {fileID: 8368258348382811142, guid: 45ee3eea2cf061c478c486574ec4a6f9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -478,7 +486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8368258348382811385, guid: 45ee3eea2cf061c478c486574ec4a6f9, type: 3}
       propertyPath: orthographic size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8368258348382811386, guid: 45ee3eea2cf061c478c486574ec4a6f9, type: 3}
       propertyPath: m_Name

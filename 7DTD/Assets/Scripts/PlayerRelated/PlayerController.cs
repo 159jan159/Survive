@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public Item itemHeld;
 
     private int selectedHotbarIndex = 0;
+    private float cooldowntoaction = 0f;
 
     private KeyCode[] hotbarControls = new KeyCode[]
     {
@@ -120,6 +121,17 @@ public class PlayerController : MonoBehaviour
                 swapItem();
             }
         }
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (cooldowntoaction <= 0)
+            {
+                myAnim.SetBool("Action", true);
+            }
+        }
+
+        myAnim.SetBool("Action", false);
+        cooldowntoaction -= Time.deltaTime;
+            
     }
     private void updateSelectedHotbarIndex(float direction){
         if (direction > 0) direction = 1;
@@ -141,14 +153,14 @@ public class PlayerController : MonoBehaviour
     private void swapItem(){
         if (myInventory.getStackInSlot(selectedHotbarIndex).isEmpty())
         {
-                        Debug.Log("setting true");
+                        //Debug.Log("setting true");
             myAnim.SetBool("Tool", false);
             itemInHand.enabled = false;
 
         }
         else
         {
-            Debug.Log("setting false");
+            //Debug.Log("setting false");
             myAnim.SetBool("Tool", true);
             itemHeld = myInventory.getStackInSlot(selectedHotbarIndex).item;
             itemInHand.enabled = true;
