@@ -123,14 +123,17 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("klik");
             if (cooldowntoaction <= 0)
             {
-                myAnim.SetBool("Action", true);
+                myAnim.SetTrigger("Action");
+                cooldowntoaction = 0.5f;
             }
         }
-
-        myAnim.SetBool("Action", false);
-        cooldowntoaction -= Time.deltaTime;
+        if (cooldowntoaction > 0)
+        {
+            cooldowntoaction -= Time.deltaTime;
+        }      
             
     }
     private void updateSelectedHotbarIndex(float direction){

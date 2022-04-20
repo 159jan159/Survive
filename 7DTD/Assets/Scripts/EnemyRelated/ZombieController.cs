@@ -59,14 +59,18 @@ public class ZombieController : MonoBehaviour
     }
     void OnMouseDown()
     {
-        if (Zhealth > 0)
+        if (Vector3.Distance(target.transform.position, transform.position) < 0.5)
         {
-            Zhealth -= 10;
-            ZheltBar.value = Zhealth;
-            Instantiate(blood, transform.position, Quaternion.identity);
-        }else{
-            Destroy(gameObject);
+            if (Zhealth > 0)
+            {
+                Zhealth -= 10;
+                ZheltBar.value = Zhealth;
+                Instantiate(blood, transform.position, Quaternion.identity);
+            }else{
+                Destroy(gameObject);
+            }
         }
+        
     }
 
 

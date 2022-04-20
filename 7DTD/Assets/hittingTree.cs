@@ -21,6 +21,7 @@ public class hittingTree : MonoBehaviour
     }
     void OnMouseDown()
     {
+        Debug.Log(Vector3.Distance(player.transform.position, transform.position));
         if (Vector3.Distance(player.transform.position, transform.position) < 1)
         {
             Debug.Log("dostblítko");
