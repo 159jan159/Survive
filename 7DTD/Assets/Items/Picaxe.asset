@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Stone Pickaxe
   ItemIcon: {fileID: 1559704157218881296, guid: 40f1e443b5a4e4248b17516145be74c5, type: 3}
+  ItemType: 2
+  Damage: 2
   maxStackSize: 1

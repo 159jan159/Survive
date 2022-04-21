@@ -4,11 +4,11 @@ sceneSetups:
   isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/InterierShop.unity
-  isLoaded: 0
+  isLoaded: 1
   isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/Mine.unity
-  isLoaded: 1
+  isLoaded: 0
   isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/start.unity

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class ZombieController : MonoBehaviour
 {
     private Animator myAnim;
-    private Transform target;
+    private PlayerController player;
     private AIDestinationSetter setter;
     private AIPath path;
     public Slider ZheltBar;
@@ -29,19 +29,20 @@ public class ZombieController : MonoBehaviour
     }
 
     private void Findtarget() {
-        target = GameObject.FindWithTag("Player").transform;
+        player = FindObjectOfType<PlayerController>();
         setter = GetComponent<AIDestinationSetter>();
         path = GetComponent<AIPath>();       
-        setter.target = target;
+        setter.target = player.transform;
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        dir = target.position - transform.position;
+        dir = player.transform.position - transform.position;
         dir.Normalize();   
-        if (Vector3.Distance(target.transform.position, transform.position)>10)
+        if (Vector3.Distance(player.transform.position, transform.position)>10)
         {
             path.enabled = false;
             myAnim.SetFloat("MoveX", 0);
@@ -59,16 +60,21 @@ public class ZombieController : MonoBehaviour
     }
     void OnMouseDown()
     {
-        if (Vector3.Distance(target.transform.position, transform.position) < 0.5)
+        if (Vector3.Distance(player.transform.position, transform.position) < 0.5)
         {
-            if (Zhealth > 0)
+            if (player.itemHeld.ItemType == typ.MeleeWeapon)
             {
-                Zhealth -= 10;
-                ZheltBar.value = Zhealth;
                 Instantiate(blood, transform.position, Quaternion.identity);
-            }else{
-                Destroy(gameObject);
+                if (Zhealth > 0)
+                {
+                    Zhealth -= 10;
+                    ZheltBar.value = Zhealth;
+                
+                }else{
+                    Destroy(gameObject);
+                }
             }
+            
         }
         
     }

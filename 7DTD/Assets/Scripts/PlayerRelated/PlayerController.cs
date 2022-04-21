@@ -33,6 +33,10 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private float speed;
+    public float actionTime;
+    public float actionTimeCounter;
+    private bool action;
+
 
     // Start is called before the first frame update
     void Start()
@@ -76,11 +80,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        //pohyb
-        float xS = Input.GetAxisRaw("Horizontal");
-        float yS = Input.GetAxisRaw("Vertical");
+        if (!action)
+        {
+           //pohyb
+            float xS = Input.GetAxisRaw("Horizontal");
+            float yS = Input.GetAxisRaw("Vertical");
 
-        myRB.velocity = new Vector2(xS,yS).normalized*speed*Time.deltaTime;
+            myRB.velocity = new Vector2(xS,yS).normalized*speed*Time.deltaTime; 
+        }       
 
     }
     private void Update(){
@@ -110,6 +117,13 @@ public class PlayerController : MonoBehaviour
                 InventoryManager.INSTANCE.openContainer(new ContainerPlayerInventory(null, myInventory));
             }
         }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (!InventoryManager.INSTANCE.hasInventoryCurrentlyOpen())
+            {
+                InventoryManager.INSTANCE.openContainer(new ContainerCrafting(null, myInventory));
+            }
+        }
 
         updateSelectedHotbarIndex(Input.GetAxis("Mouse ScrollWheel"));
 
@@ -121,19 +135,25 @@ public class PlayerController : MonoBehaviour
                 swapItem();
             }
         }
+
+
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("klik");
-            if (cooldowntoaction <= 0)
-            {
-                myAnim.SetTrigger("Action");
-                cooldowntoaction = 0.5f;
-            }
+            actionTimeCounter = actionTime;
+            action = true;
+            myRB.velocity = Vector2.zero;
+            myAnim.SetBool("Action", true);
         }
-        if (cooldowntoaction > 0)
+        if (actionTimeCounter > 0)
         {
-            cooldowntoaction -= Time.deltaTime;
-        }      
+            actionTimeCounter -= Time.deltaTime;
+        }
+        if (actionTimeCounter <= 0)
+        {
+            action = false;
+            myAnim.SetBool("Action", false);
+        }
+
             
     }
     private void updateSelectedHotbarIndex(float direction){

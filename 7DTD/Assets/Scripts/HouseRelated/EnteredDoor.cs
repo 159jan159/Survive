@@ -12,6 +12,7 @@ public class EnteredDoor : MonoBehaviour
         {
             Debug.Log("pyxo");
             SceneManager.LoadScene(whatSceneSwapTo);
+            other.gameObject.transform.position = new Vector3(0,0,0);
         }
     }
 }

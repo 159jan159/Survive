@@ -50,6 +50,28 @@ public class Inventory
         return inventoryContents[index];
     }
 
+    public int getCountOfItems(Item inItem){
+        int count = 0;
+        foreach (var item in inventoryContents)
+        {
+            if (item.getItem() == inItem)
+            {
+                count =+ item.getCount();
+            }
+        }
+        return count;
+    }
+    public void removeItems(Item inItem, int count){
+        foreach (var item in inventoryContents)
+        {
+            if (item.getItem() == inItem)
+            {
+                item.setCount(item.getCount() - count) ;
+                return;
+            }
+        }
+    }
+
     public List<ItemStack> getInventoryStacks()
     {
         return inventoryContents;

@@ -17,6 +17,7 @@ public class RandomWalkGenerator : MonoBehaviour
     [SerializeField]
     private TilemapVisualizer tilemapVisualizer;
 
+
     void Start()    
     {
         runGeneration();
@@ -25,6 +26,8 @@ public class RandomWalkGenerator : MonoBehaviour
         HashSet<Vector2Int> floorPositions = RunRandomWalk();
         tilemapVisualizer.paintFloorTiles(floorPositions);
         WallGenerator.CreateWalls(floorPositions, tilemapVisualizer);
+        StonesGeneration.CreateStones(floorPositions, tilemapVisualizer);
+        StairsGeneration.CreateStairs(floorPositions,tilemapVisualizer);
     }
 
     protected HashSet<Vector2Int> RunRandomWalk(){
